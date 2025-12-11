@@ -1,0 +1,6 @@
+// Minimal Prisma config: provide datasource URL from environment for CLI operations.
+export default {
+	datasource: {
+		url: process.env.DATABASE_URL!,
+	},
+} as any;
