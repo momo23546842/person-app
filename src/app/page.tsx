@@ -120,6 +120,13 @@ export default function Home() {
     setShowForm(true);
   };
 
+  // Handle clicking the Add Person button: ensure form is reset and not in edit mode
+  const handleAddClick = () => {
+    setFormData({ name: '', email: '', age: '', bio: '' });
+    setEditingPerson(null);
+    setShowForm(true);
+  };
+
   // Handle delete
   const handleDelete = async (id: number) => {
     if (!confirm('Are you sure you want to delete this person? This will also delete all their meals.')) {
@@ -151,7 +158,7 @@ export default function Home() {
           <p className="text-gray-600 mt-1">Manage people and track their meal habits</p>
         </div>
         <button
-          onClick={() => setShowForm(!showForm)}
+          onClick={handleAddClick}
           className="bg-slate-700 text-white px-6 py-2 rounded-lg hover:bg-slate-800 transition-colors flex items-center gap-2 shadow-md"
         >
           {showForm ? '✕ Cancel' : '+ Add Person'}
