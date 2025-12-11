@@ -10,14 +10,26 @@ This project demonstrates **full-stack development mastery** by integrating a re
 ### 👤 Person Management
 Implements **complete CRUD operations** (Create, Read, Update, Delete) for managing person records, ensuring seamless data handling.
 
+#### ✨ Add a New Person
+You can easily add a new person to the system. The intuitive interface allows for quick input of basic profiles.
+
 <p align="center">
-  <img src="./images/Screenshot 2025-12-11 154832.png" alt="Person List Screen" width="30%" />
-  <img src="./images/Screenshot 2025-12-11 154907.png" alt="Person List Screen" width="30%" />
-  <img src="./images/Screenshot 2025-12-11 153116.png" alt="Edit Person Screen" width="30%" />
-  <img src="./images/Screenshot 2025-12-11 153157.png" alt="Delete Action Screen" width="30%" />
+  <img src="./images/Screenshot 2025-12-11 154832.png" alt="Add Person Step 1" width="45%" />
+  <img src="./images/Screenshot 2025-12-11 154907.png" alt="Add Person Step 2" width="45%" />
 </p>
+
+#### ✏️ Edit Person Details
+Clicking the "Edit" button opens a form pre-filled with the user's current data, making updates simple and error-free.
+
 <p align="center">
-  <i>(Left to Right: Person List View, Edit Interface, Delete Action)</i>
+  <img src="./images/Screenshot 2025-12-11 153116.png" alt="Edit Person Screen" width="70%" />
+</p>
+
+#### 🗑️ Delete a Person
+To remove a person, click the "Delete" button. This action securely removes the record from the database.
+
+<p align="center">
+  <img src="./images/Screenshot 2025-12-11 153157.png" alt="Delete Action Screen" width="70%" />
 </p>
 
 ### 🍽️ Meal Tracking
