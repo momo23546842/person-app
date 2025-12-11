@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function GitHubPage() {
   // Replace this URL with your actual GitHub repository URL
-  const githubRepoUrl = 'https://github.com/YOUR_USERNAME/meal-habit-tracker';
+  const githubRepoUrl = 'https://github.com/momo23546842/person-app';
   
   return (
     <div className="max-w-4xl mx-auto">
