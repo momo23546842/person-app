@@ -46,7 +46,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. FUTURE ROADMAP */}
+      {/* 3. THREE-PHASE ROADMAP */}
+      <section>
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <span className="mr-2">📌</span> Project Roadmap & Phases
+        </h2>
+
+        <div className="space-y-6">
+          <div className="p-4 bg-emerald-50 rounded-lg border-l-4 border-emerald-400">
+            <h3 className="text-lg font-bold text-emerald-800">Phase 1: Core Architecture Foundation (Completed) ✅</h3>
+            <p className="text-sm text-emerald-900 mt-2"><strong>Goal:</strong> Establish a reliable data management system.</p>
+            <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+              <li><strong>Focus:</strong> Implemented a robust CRUD (Create, Read, Update, Delete) system for user management ("Person").</li>
+              <li><strong>Outcome:</strong> Built the database schema using Prisma and ensured responsive UI design for seamless interaction on any device.</li>
+            </ul>
+          </div>
+
+          <div className="p-4 bg-emerald-50 rounded-lg border-l-4 border-emerald-400">
+            <h3 className="text-lg font-bold text-emerald-800">Phase 2: AI Assistant Prototyping (Completed) ✅</h3>
+            <p className="text-sm text-emerald-900 mt-2"><strong>Goal:</strong> Verify the potential of Natural Language Processing (NLP) in nutrition.</p>
+            <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+              <li><strong>Focus:</strong> Developed a conversational interface using <strong>Groq API</strong>.</li>
+              <li><strong>Outcome:</strong> Created a chatbot that instantly parses food names and returns nutritional data. By using Groq, near-instantaneous response times were achieved, improving UX compared to standard LLM inference.</li>
+            </ul>
+          </div>
+
+          <div className="p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+            <h3 className="text-lg font-bold text-yellow-800">Phase 3: System Integration (Current Focus) 🚧</h3>
+            <p className="text-sm text-yellow-900 mt-2"><strong>Goal:</strong> Fully automate the logging process using AI.</p>
+            <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+              <li><strong>Focus:</strong> Connecting the AI Chat directly to the Database.</li>
+              <li><strong>Technical Challenge:</strong> Implementing "Function Calling" and structured data output (JSON) to allow the AI to automatically create records in the <strong>MealLog</strong> database table based on chat history.</li>
+              <li><strong>Vision:</strong> A system where users simply say "I had a banana," and the app automatically identifies the user and updates their specific health record.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FUTURE ROADMAP */}
       <section>
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <span className="mr-2">🚀</span> Future Roadmap
