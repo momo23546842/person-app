@@ -62,10 +62,10 @@ const personsData = [
     bio: 'Chef and food blogger experimenting with Mediterranean diet principles.',
   },
   {
-    name: 'Hannah Lee',
-    email: 'hannah.lee@example.com',
-    age: 31,
-    bio: 'Personal trainer helping clients achieve their fitness goals through nutrition.',
+    name: 'Olivia Parker',
+    email: 'olivia.parker@example.com',
+    age: 27,
+    bio: 'Food science enthusiast who tracks meals to test dietary experiments.',
   },
 ];
 
@@ -130,11 +130,10 @@ const mealsData: Array<Array<{
     { title: 'lunch', calories: 580, protein: 28, fat: 32, carbs: 42, eatenAt: new Date('2024-12-10T14:00:00'), notes: 'Grilled sea bass with olive oil roasted vegetables' },
     { title: 'dinner', calories: 620, protein: 25, fat: 35, carbs: 50, eatenAt: new Date('2024-12-10T20:00:00'), notes: 'Paella with seafood and saffron rice' },
   ],
-  // Person 10: Hannah Lee (personal trainer - balanced macros)
+  // Person 10: Olivia Parker (food science experiments)
   [
-    { title: 'breakfast', calories: 420, protein: 30, fat: 14, carbs: 42, eatenAt: new Date('2024-12-10T06:30:00'), notes: 'Egg white omelet with spinach and whole grain toast' },
-    { title: 'lunch', calories: 550, protein: 40, fat: 18, carbs: 48, eatenAt: new Date('2024-12-10T12:00:00'), notes: 'Grilled turkey with sweet potato and steamed broccoli' },
-    { title: 'snack', calories: 180, protein: 15, fat: 8, carbs: 12, eatenAt: new Date('2024-12-10T15:30:00'), notes: 'Cottage cheese with almonds' },
+    { title: 'breakfast', calories: 360, protein: 22, fat: 12, carbs: 40, eatenAt: new Date('2024-12-11T08:00:00'), notes: 'Greek yogurt with granola and mixed berries' },
+    { title: 'lunch', calories: 620, protein: 36, fat: 24, carbs: 58, eatenAt: new Date('2024-12-11T13:00:00'), notes: 'Grilled tofu bowl with brown rice and vegetables' },
   ],
 ];
 
@@ -145,7 +144,7 @@ async function main() {
   await prisma.meal.deleteMany();
   await prisma.person.deleteMany();
 
-  console.log('📝 Creating 10 sample persons with meals...');
+  console.log(`📝 Creating ${personsData.length} sample persons with meals...`);
 
   let totalMeals = 0;
 
