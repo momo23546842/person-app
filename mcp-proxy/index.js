@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-const https = require('https');
 const readline = require('readline');
 
-const REMOTE_MCP_URL = 'https://person-app-gamma.vercel.app/api/mcp';
+const REMOTE_MCP_URL = process.env.MCP_URL || process.argv[2] || 'https://person-app-gamma.vercel.app/api/mcp';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -15,11 +14,14 @@ function makeRequest(data) {
   return new Promise((resolve, reject) => {
     const url = new URL(REMOTE_MCP_URL);
     const postData = JSON.stringify(data);
-    
+
+    const httpModule = url.protocol === 'https:' ? require('https') : require('http');
+    const port = url.port ? Number(url.port) : (url.protocol === 'https:' ? 443 : 80);
+
     const options = {
       hostname: url.hostname,
-      port: 443,
-      path: url.pathname,
+      port,
+      path: url.pathname + (url.search || ''),
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +29,7 @@ function makeRequest(data) {
       }
     };
 
-    const req = https.request(options, (res) => {
+    const req = httpModule.request(options, (res) => {
       let responseData = '';
       
       res.on('data', (chunk) => {
@@ -69,6 +71,11 @@ rl.on('line', async (line) => {
     console.error(JSON.stringify(errorResponse));
   }
 });
+
+if (!process.env.MCP_URL && !process.argv[2]) {
+  console.error(`mcp-proxy: using default REMOTE_MCP_URL=${REMOTE_MCP_URL}`);
+  console.error('Set MCP_URL env var or pass URL as first arg to point to your local Next.js API.');
+}
 
 process.on('SIGINT', () => {
   process.exit(0);

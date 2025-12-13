@@ -1,7 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // No turbopack.root set — use Next.js default project root.
-};
+/** Minimal Next.js config file. */
+const nextConfig = {};
 
 export default nextConfig;

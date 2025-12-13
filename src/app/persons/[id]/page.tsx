@@ -164,7 +164,7 @@ export default function PersonDetailPage({ params }: { params: Promise<{ id: str
     return (
       <div className="text-center py-12">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Person not found</h1>
-        <Link href="/" className="text-slate-600 hover:text-slate-800">
+        <Link href="/persons" className="text-slate-600 hover:text-slate-800">
           ← Back to Persons
         </Link>
       </div>
@@ -177,7 +177,7 @@ export default function PersonDetailPage({ params }: { params: Promise<{ id: str
     <div>
       {/* Back Link */}
       <Link
-        href="/"
+        href="/persons"
         className="inline-flex items-center text-slate-600 hover:text-slate-800 mb-6"
       >
         ← Back to Persons
