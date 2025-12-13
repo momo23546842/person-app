@@ -43,6 +43,22 @@ Extends functionality by allowing individualized meal records. This reflects the
 * **ORM:** Prisma
 * **Deployment:** Vercel
 
+### Phase 1: Core Architecture Foundation (Completed) ✅
+**Goal:** Establish a reliable data management system.
+* **Focus:** Implemented a robust CRUD (Create, Read, Update, Delete) system for user management ("Person").
+* **Outcome:** Built the database schema using Prisma and ensured responsive UI design for seamless interaction on any device.
+
+### Phase 2: AI Assistant Prototyping (Completed) ✅
+**Goal:** Verify the potential of Natural Language Processing (NLP) in nutrition.
+* **Focus:** Developed a conversational interface using **Groq API**.
+* **Outcome:** Created a chatbot that instantly parses food names and returns nutritional data. By using Groq, I achieved near-instantaneous response times, significantly improving User Experience (UX) compared to standard LLM inference.
+
+### Phase 3: System Integration (Current Focus) 🚧
+**Goal:** Fully automate the logging process using AI.
+* **Focus:** Connecting the AI Chat directly to the Database.
+* **Technical Challenge:** Implementing "Function Calling" and structured data output (JSON) to allow the AI to automatically create records in the `MealLog` database table based on chat history.
+* **Vision:** A system where users simply say "I had a banana," and the app automatically identifies the user and updates their specific health record.  (See <attachments> above for file contents. You may not need to search or read the file again.)
+
 ## 🚀 Future Roadmap
 To enhance utility for professional nutrition guidance, I plan to implement:
 * **📊 Data Visualization:** Charts to visualize weight trends and dietary improvements over time.
